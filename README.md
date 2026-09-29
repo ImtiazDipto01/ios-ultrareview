@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/banner.svg" alt="iOS UltraReview — evidence first. A clear path to merge." width="100%">
+  <img src="assets/logo-fold.png" alt="iOS UltraReview — Fold logo" width="100%">
 </p>
 
 <p align="center">
