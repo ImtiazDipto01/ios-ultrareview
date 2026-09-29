@@ -1,0 +1,4 @@
+interface:
+  display_name: "iOS UltraReview"
+  short_description: "Evidence-based iOS pull request review"
+  default_prompt: "Use $ios-ultrareview to prepare a draft review of this iOS pull request with draft inline findings, a confidence score, and a proposed decision; do not post comments or submit a GitHub review unless I explicitly authorize live submission."

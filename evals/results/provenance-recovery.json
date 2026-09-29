@@ -1,0 +1,280 @@
+{
+  "kind": "Sanitized post-hoc provenance addendum; not an original freeze record or a newly executed evaluation",
+  "recovered_utc": "2026-09-29T05:37:28.392729+00:00",
+  "source": "Selected retained Codex Desktop host metadata matched to reviewer sessions. Private raw session logs are not redistributed. Digests are audit identifiers; they do not permit independent verification without the retained sources.",
+  "configured_model": "gpt-6-sol",
+  "settings": {
+    "reasoning_effort": "ultra"
+  },
+  "records": [
+    {
+      "reviewer": "reviewer-1",
+      "case_scope": "Historical aided reviewer pass A: eleven cases in one session; no per-case usage attribution.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 2188410,
+        "cached_input_tokens": 2094720,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 16010,
+        "reasoning_output_tokens": 4233,
+        "total_tokens": 2204420
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "4fafc20f1532ac3ea9d754a18783e3c53658e7f66c4b700e4a23e806a1440954"
+        ],
+        "usage_record": "d473139fc02792f69d7dc28033a92376cc0a5f677162ec7390d4ce1dab67d5dd"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-2",
+      "case_scope": "Historical aided reviewer pass B: eleven cases in one session; no per-case usage attribution.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 2634721,
+        "cached_input_tokens": 2545024,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14994,
+        "reasoning_output_tokens": 4328,
+        "total_tokens": 2649715
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "c9c60a02f75ae8fbf287ce1edb720e5ddfb7da201d7815552199594854affbb3"
+        ],
+        "usage_record": "bf40e3115cd511a972dd4e65bf6d02ad54a15cd32361e2a10baa67b2522ca793"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-3",
+      "case_scope": "Whole sequential A1/A2/A3 reviewer session; usage not separated per stage.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 3985342,
+        "cached_input_tokens": 3871232,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 34718,
+        "reasoning_output_tokens": 10389,
+        "total_tokens": 4020060
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "e645517d141524bc39fede6bbb9d83eab9ba6a15be300b6c545cf99e765e1191",
+          "98fff5ca2710d90d94f3749e7d2d302dd058c2b1576360385262b9d732266f43",
+          "5a8036219e4f5eeb450d17442453ca30053a6c59efff4b5b253ec331cc683b1a"
+        ],
+        "usage_record": "4c37ed2f29cbb040b484856193038b910a1db6bf41a39adfafa6dd581a823352"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-4",
+      "case_scope": "Fresh scene defective snapshot reviewer session.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 1484074,
+        "cached_input_tokens": 1419136,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15453,
+        "reasoning_output_tokens": 5083,
+        "total_tokens": 1499527
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "b7fdaf942b6f79fc37663c282406140cbe5dbf2c5426717140406d33243de7b2"
+        ],
+        "usage_record": "bed410071e45aafd0729a9147cc4807c8988b188c2b9d16631e6b785a05362f1"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-5",
+      "case_scope": "Fresh scene clean snapshot reviewer session.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 1482186,
+        "cached_input_tokens": 1413248,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 18122,
+        "reasoning_output_tokens": 5980,
+        "total_tokens": 1500308
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "0b0d69231686ab34d554a7e87b6aa34d524e000889feb891e457c25be1c43a09"
+        ],
+        "usage_record": "87a9ed500755ea3268935872d295dd2e728e22f4d2a0dc7c6e96cfafda12f018"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-6",
+      "case_scope": "Fresh API defective snapshot reviewer session.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 1379645,
+        "cached_input_tokens": 1328256,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 14172,
+        "reasoning_output_tokens": 3607,
+        "total_tokens": 1393817
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "dcda0f9b21c657d0a664420b9603fb5b4c02d78d51aa7eb8c89d0f1321afa91c"
+        ],
+        "usage_record": "62c92173112b6d73d2c2380438612b9cacd2799e1b168ce14b10115e6fc46d97"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-7",
+      "case_scope": "Fresh API clean snapshot reviewer session.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 1239778,
+        "cached_input_tokens": 1163520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 15310,
+        "reasoning_output_tokens": 4638,
+        "total_tokens": 1255088
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "68b2a497018e57fce8531f941b287c81a3510dffcd4585b45d9355025e82324a"
+        ],
+        "usage_record": "c1cc55060a190c57cb2a0d469e6bbe726075286e6c92d134b636a719c702641d"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-8",
+      "case_scope": "Fresh Xcode defective snapshot reviewer session.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 558424,
+        "cached_input_tokens": 502912,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 11929,
+        "reasoning_output_tokens": 4143,
+        "total_tokens": 570353
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "b190a4b633c8fe488ba5bca1236d417c53abaef76c254e0891c8375553391b9d"
+        ],
+        "usage_record": "0667990cad39f0991cd6887c49ace585f8f04b717758f20dd0322fd465624512"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    },
+    {
+      "reviewer": "reviewer-9",
+      "case_scope": "Fresh Xcode clean snapshot reviewer session.",
+      "configured_model": "gpt-6-sol",
+      "settings": {
+        "reasoning_effort": "ultra",
+        "service_tier": null
+      },
+      "host_metadata": {
+        "model_provider": "openai",
+        "originator": "Codex Desktop",
+        "cli_version": "0.155.0-alpha.16.3"
+      },
+      "reported_session_usage": {
+        "input_tokens": 905132,
+        "cached_input_tokens": 843520,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 11773,
+        "reasoning_output_tokens": 2734,
+        "total_tokens": 916905
+      },
+      "selected_source_digests": {
+        "context_records": [
+          "e815abb341efc7ccd610b2ac49d0d05bbd425f4cee477c69c1a65bf2e98c94e5"
+        ],
+        "usage_record": "e6b690779f568879f59d2cc75dbfa90885374b2af0b72256100192964992f9ef"
+      },
+      "usage_scope": "Whole reviewer session; no per-case attribution for multi-case sessions; excludes parent orchestration and fixture authoring."
+    }
+  ],
+  "limits": [
+    "Configured host model, not an independently server-attested backend snapshot.",
+    "Unavailable sampling settings remain unknown.",
+    "Usage is client-reported whole-session accounting, not billing or a cost comparison.",
+    "Cached tokens are included in input; reasoning tokens are included in output. Do not add them twice."
+  ]
+}

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="380" viewBox="0 0 1280 380" role="img" aria-labelledby="title desc">
+  <title id="title">iOS UltraReview</title>
+  <desc id="desc">Evidence first. A clear path to merge. An open-source review skill for coding agents.</desc>
+  <defs>
+    <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#0f172a"/><stop offset="1" stop-color="#182447"/></linearGradient>
+    <linearGradient id="accent"><stop stop-color="#38bdf8"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
+  </defs>
+  <rect width="1280" height="380" rx="22" fill="url(#bg)"/>
+  <circle cx="1110" cy="35" r="240" fill="#6366f1" opacity=".08"/>
+  <circle cx="1030" cy="325" r="185" fill="#38bdf8" opacity=".05"/>
+  <rect x="64" y="64" width="44" height="5" rx="2" fill="url(#accent)"/>
+  <text x="64" y="117" font-family="Arial,Helvetica,sans-serif" font-size="16" font-weight="700" letter-spacing="3" fill="#7dd3fc">OPEN SOURCE · AGENT SKILL</text>
+  <text x="60" y="193" font-family="Arial,Helvetica,sans-serif" font-size="64" font-weight="700" fill="#f8fafc">iOS UltraReview</text>
+  <text x="64" y="245" font-family="Arial,Helvetica,sans-serif" font-size="26" fill="#cbd5e1">Evidence first. A clear path to merge.</text>
+  <text x="64" y="311" font-family="Arial,Helvetica,sans-serif" font-size="17" fill="#94a3b8">Product intent  /  Platform depth  /  Finite repair paths</text>
+  <rect x="978" y="92" width="206" height="202" rx="24" fill="#0f172a" stroke="#334155"/>
+  <path d="M1015 151l13 13 27-31" fill="none" stroke="#34d399" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1015 201l13 13 27-31" fill="none" stroke="#38bdf8" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1015 251l13 13 27-31" fill="none" stroke="#a78bfa" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1080 148h66m-66 50h66m-66 50h66" stroke="#64748b" stroke-width="5" stroke-linecap="round"/>
+</svg>

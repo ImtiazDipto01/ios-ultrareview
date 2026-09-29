@@ -1,0 +1,461 @@
+{
+  "kind": "Public derived summary of controlled development evaluations; original frozen records remain unchanged",
+  "original_report_sha256": "5c36d25603e65c8ea43060460e4d50b07ce7d375602214d265cbac4c068099f3",
+  "original_provenance_addendum_sha256": "a75b608e4cd947eef4192edbbb5d26d56adf9eea0b1ec81ae8fe67ee02d565a6",
+  "runtime_version": "1.0.0 candidates",
+  "runtime_final_sha256": "8650c95e2824407b5efca8d9e79b81504ae262176643d854126d34af697ba10d",
+  "runtime_note": "Scene pair used RC1 before density-only scoring-example/output edits. API pair and convergence used final runtime. RC1 scene cases were not rerun against final; do not report all four as identical-runtime measurements.",
+  "model": {
+    "id": "gpt-6-sol",
+    "settings": {
+      "reasoning_effort": "ultra"
+    },
+    "provenance": "Post-hoc recovery; see provenance-recovery.json",
+    "tokens": "See per-session usage records; no aggregate per-case attribution"
+  },
+  "independent_discovery": {
+    "outcomes": [
+      {
+        "input": "input-01",
+        "domain": "scene_state",
+        "variant": "defect",
+        "runtime": "runtime-snapshot",
+        "runtime_sha256": "3061f2afdb2cb7f704ec7165a16d4fb7504ae5b8d307a17035c4eea874306ea6",
+        "base": "90363dfaa04df0b33491172b65ae09abbbc21f3a",
+        "head": "5b6d5562431c88a408f0f3f1d6ec0d7558796120",
+        "score": 3,
+        "decision": "REQUEST_CHANGES",
+        "findings": [
+          {
+            "id": "B1",
+            "severity": "P1",
+            "title": "Create a separate selection for each window",
+            "path": "Sources/ReviewFixture/DocumentState.swift",
+            "line": 26,
+            "side": "RIGHT",
+            "root_cause": "AppServices.makeWindow injects the same process-owned Selection into every WindowModel.",
+            "consequences": [
+              "Selection in one window changes other windows.",
+              "A new window inherits a prior document selection.",
+              "Restoration overwrites selection in another scene."
+            ],
+            "status": "Open"
+          }
+        ],
+        "seeded_root_discovered": true,
+        "false_clean_code_blockers": null,
+        "adjudication": "Root evaluator checked frozen causality, product contract, changed-line anchor and P1 impact; hidden executed outcome assessed separately.",
+        "hidden_tests_executed": true,
+        "hidden_outcome_exit": 1,
+        "hidden_outcome_test_failed": true,
+        "review_words": 744,
+        "frozen_record_sha256": "ef9671bb8012e0443414648ca1e079bac66f0b1aa678cd7b78d6404cafff1532",
+        "review_sha256": "ea0c8891310de2627f94c24496b419feadb63bfffb0bd5c81b2a29ecad7c1479",
+        "model_id": "gpt-6-sol",
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "tokens": 1499527,
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-4"
+        },
+        "token_usage_scope": "Client-reported whole reviewer session, not isolated task/billing cost; see reviewer-4"
+      },
+      {
+        "input": "input-02",
+        "domain": "scene_state",
+        "variant": "clean",
+        "runtime": "runtime-snapshot",
+        "runtime_sha256": "3061f2afdb2cb7f704ec7165a16d4fb7504ae5b8d307a17035c4eea874306ea6",
+        "base": "90363dfaa04df0b33491172b65ae09abbbc21f3a",
+        "head": "761a19c42ce02b73bba5506fd2a6b75a79afaee0",
+        "score": 5,
+        "decision": "APPROVE",
+        "findings": [],
+        "seeded_root_discovered": null,
+        "false_clean_code_blockers": 0,
+        "adjudication": "Root evaluator checked frozen causality, product contract, changed-line anchor and P1 impact; hidden executed outcome assessed separately.",
+        "hidden_tests_executed": true,
+        "hidden_outcome_exit": 0,
+        "hidden_outcome_test_failed": false,
+        "review_words": 484,
+        "frozen_record_sha256": "478be39eb53cdee6559ae9134363f9760b4bc9e6e4bf1849dfadf32de52537b5",
+        "review_sha256": "d66414067bd27f5b6fd0d5d0023b5cc42d8de2359460151ce12ed744a98572a9",
+        "model_id": "gpt-6-sol",
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "tokens": 1500308,
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-5"
+        },
+        "token_usage_scope": "Client-reported whole reviewer session, not isolated task/billing cost; see reviewer-5"
+      },
+      {
+        "input": "input-09",
+        "domain": "api_rollout",
+        "variant": "defect",
+        "runtime": "runtime-final",
+        "runtime_sha256": "8650c95e2824407b5efca8d9e79b81504ae262176643d854126d34af697ba10d",
+        "base": "da37bc4e8c8e1431a4cb178a529dcfe9a5b72eaa",
+        "head": "565308c21ecc46a3085574a3f8c5c1161c6b5ea1",
+        "score": 3,
+        "decision": "REQUEST_CHANGES",
+        "findings": [
+          {
+            "id": "B1",
+            "severity": "P1",
+            "title": "Preserve decoding of the legacy name field",
+            "path": "Sources/ReviewFixture/ProfileDTO.swift",
+            "line": 6,
+            "side": "RIGHT",
+            "root_cause": "Synthesized decoding only recognizes display_name; mandatory displayName cannot read legacy name",
+            "consequence": "Supported staged-rollout responses and previous-version disk cache fail profile loading",
+            "evidence": "Two diagnostic acceptance failures; PRODUCT.md explicitly requires backward-compatible decode",
+            "status": "Open"
+          }
+        ],
+        "seeded_root_discovered": true,
+        "false_clean_code_blockers": null,
+        "adjudication": "Root evaluator checked frozen causality, product contract, changed-line anchor and P1 impact; hidden executed outcome assessed separately.",
+        "hidden_tests_executed": true,
+        "hidden_outcome_exit": 1,
+        "hidden_outcome_test_failed": true,
+        "review_words": 634,
+        "frozen_record_sha256": "9561839ec70dd15f7d1dc2ca6dfed396f664f5bd449f939f8c79d6a25b4014de",
+        "review_sha256": "961b3afa7abebf4d3b2ee3b1819fa23350293e012d6ff1c0fdb17da4fce36a78",
+        "model_id": "gpt-6-sol",
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "tokens": 1393817,
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-6"
+        },
+        "token_usage_scope": "Client-reported whole reviewer session, not isolated task/billing cost; see reviewer-6"
+      },
+      {
+        "input": "input-10",
+        "domain": "api_rollout",
+        "variant": "clean",
+        "runtime": "runtime-final",
+        "runtime_sha256": "8650c95e2824407b5efca8d9e79b81504ae262176643d854126d34af697ba10d",
+        "base": "da37bc4e8c8e1431a4cb178a529dcfe9a5b72eaa",
+        "head": "39c268b6b1cd9fb736c8ac6c0ea2ac98806ced29",
+        "score": 5,
+        "decision": "APPROVE",
+        "findings": [],
+        "seeded_root_discovered": null,
+        "false_clean_code_blockers": 0,
+        "adjudication": "Root evaluator checked frozen causality, product contract, changed-line anchor and P1 impact; hidden executed outcome assessed separately.",
+        "hidden_tests_executed": true,
+        "hidden_outcome_exit": 0,
+        "hidden_outcome_test_failed": false,
+        "review_words": 551,
+        "frozen_record_sha256": "03436a2649f59707a7b8be25b6fd49c9b122d689a372ebaaefdcfd615242c5a7",
+        "review_sha256": "acbd7e8a2d850c2f95902826174b307f88d25a625e3cd764d2f0466db064d7a0",
+        "model_id": "gpt-6-sol",
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "tokens": 1255088,
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-7"
+        },
+        "token_usage_scope": "Client-reported whole reviewer session, not isolated task/billing cost; see reviewer-7"
+      }
+    ],
+    "seeded_cases_reviewed": 2,
+    "unique_seed_types_reviewed": 2,
+    "seeded_roots_discovered": 2,
+    "clean_controls_reviewed": 2,
+    "false_clean_code_blockers": 0,
+    "fresh_context_per_case": true,
+    "limits": "Access boundaries were task instructions and caller attestations, not OS-enforced hidden-file isolation. Four small controlled components across two runtime candidates; no general accuracy estimate."
+  },
+  "sequential_convergence": {
+    "outcomes": [
+      {
+        "stage": "A1",
+        "head": "d2370fd93def9898705cd21a4db900ff268ea594",
+        "score": 3,
+        "decision": "REQUEST_CHANGES",
+        "B": [
+          {
+            "id": "B1",
+            "source": "P1 finding",
+            "required_outcome": "Persist before completion; failed save preserves setup and draft.",
+            "pass_condition": "Focused tests show flags false while save is pending and after failure, city/error retained on failure, and completion only after successful uncancelled save.",
+            "status": "Open"
+          },
+          {
+            "id": "B2",
+            "source": "P2 finding",
+            "required_outcome": "Location denial restores manual entry.",
+            "pass_condition": "beginLocating() then locationDenied() leaves isLocating false and manualEntryEnabled true; regression passes.",
+            "status": "Open"
+          },
+          {
+            "id": "B3",
+            "source": "P2 finding",
+            "required_outcome": "Cancelled pending save cannot complete setup.",
+            "pass_condition": "A task cancelled during a gated save remains incomplete and undismissed after the repository returns success; regression passes.",
+            "status": "Open"
+          },
+          {
+            "id": "B4",
+            "source": "Validation gap",
+            "required_outcome": "Successful relevant exact-target app build and hosted tests.",
+            "pass_condition": "Developer or CI supplies successful FixtureApp Debug build-for-testing then test-without-building on an installed iPhone simulator, recording the reviewed repaired head SHA (or proven current merge result), Xcode/OS/destination, underlying exits, and relevant tests.",
+            "status": "Open",
+            "remaining": "Host sandbox prevented a successful app build and simulator access; no source change is requested for this evidence item."
+          }
+        ],
+        "E": [],
+        "review_words": 949,
+        "fresh_context": true,
+        "model_id": "gpt-6-sol",
+        "tokens": null,
+        "review_sha256": "2669b169ef4ab71658c8d94d1e9c4efa2e0c9b6bc21a0d69cce54ce5d8033a87",
+        "frozen_record_sha256": "b25dc302ef7961aa979dcd5552687ca94f70c09439f98f6fc6e01c97be75fd45",
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-3"
+        },
+        "token_usage_scope": "Per-stage usage unavailable; all stages share the whole-session total in reviewer-3"
+      },
+      {
+        "stage": "A2",
+        "head": "53f35a8d53b56db8a9df350878f795fa86c863d3",
+        "score": 4,
+        "decision": "COMMENT",
+        "B": [
+          {
+            "id": "B1",
+            "source": "P1 finding",
+            "required_outcome": "Persist before completion; failed save preserves setup and draft.",
+            "pass_condition": "Focused tests show flags false while save is pending and after failure, city/error retained on failure, and completion only after successful uncancelled save.",
+            "status": "Done",
+            "verification": "Reviewer-authored exact-source harness passed on 53f35a8d53b56db8a9df350878f795fa86c863d3; supplied portable suite also verifies applicable restored failure/success/denial tests."
+          },
+          {
+            "id": "B2",
+            "source": "P2 finding",
+            "required_outcome": "Location denial restores manual entry.",
+            "pass_condition": "beginLocating() then locationDenied() leaves isLocating false and manualEntryEnabled true; regression passes.",
+            "status": "Done",
+            "verification": "Reviewer-authored exact-source harness passed on 53f35a8d53b56db8a9df350878f795fa86c863d3; supplied portable suite also verifies applicable restored failure/success/denial tests."
+          },
+          {
+            "id": "B3",
+            "source": "P2 finding",
+            "required_outcome": "Cancelled pending save cannot complete setup.",
+            "pass_condition": "A task cancelled during a gated save remains incomplete and undismissed after the repository returns success; regression passes.",
+            "status": "Done",
+            "verification": "Reviewer-authored exact-source harness passed on 53f35a8d53b56db8a9df350878f795fa86c863d3; supplied portable suite also verifies applicable restored failure/success/denial tests."
+          },
+          {
+            "id": "B4",
+            "source": "Validation gap",
+            "required_outcome": "Successful relevant exact-target app build and hosted tests.",
+            "pass_condition": "Developer or CI supplies successful FixtureApp Debug build-for-testing then test-without-building on an installed iPhone simulator, recording the reviewed repaired head SHA (or proven current merge result), Xcode/OS/destination, underlying exits, and relevant tests.",
+            "status": "Open",
+            "remaining": "Host sandbox prevented a successful app build and simulator access; no source change is requested for this evidence item.",
+            "verification": "No new qualifying app-scheme build/test evidence; prior host limitation unchanged."
+          }
+        ],
+        "E": [],
+        "review_words": 741,
+        "fresh_context": false,
+        "model_id": "gpt-6-sol",
+        "tokens": null,
+        "review_sha256": "71d62759ee7bb699c67243ab78f57036b8b548c50ee0f4285ec888c46503e0c7",
+        "frozen_record_sha256": "f1b1353bf7861bd487cf81ae3bafa8af9e36253655ec03d16fc9db4a55285178",
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-3"
+        },
+        "token_usage_scope": "Per-stage usage unavailable; all stages share the whole-session total in reviewer-3"
+      },
+      {
+        "stage": "A3",
+        "head": "53f35a8d53b56db8a9df350878f795fa86c863d3",
+        "score": 5,
+        "decision": "APPROVE",
+        "B": [
+          {
+            "id": "B1",
+            "source": "P1 finding",
+            "required_outcome": "Persist before completion; failed save preserves setup and draft.",
+            "pass_condition": "Focused tests show flags false while save is pending and after failure, city/error retained on failure, and completion only after successful uncancelled save.",
+            "status": "Done",
+            "verification": "Reviewer-authored exact-source harness passed on 53f35a8d53b56db8a9df350878f795fa86c863d3; supplied portable suite also verifies applicable restored failure/success/denial tests."
+          },
+          {
+            "id": "B2",
+            "source": "P2 finding",
+            "required_outcome": "Location denial restores manual entry.",
+            "pass_condition": "beginLocating() then locationDenied() leaves isLocating false and manualEntryEnabled true; regression passes.",
+            "status": "Done",
+            "verification": "Reviewer-authored exact-source harness passed on 53f35a8d53b56db8a9df350878f795fa86c863d3; supplied portable suite also verifies applicable restored failure/success/denial tests."
+          },
+          {
+            "id": "B3",
+            "source": "P2 finding",
+            "required_outcome": "Cancelled pending save cannot complete setup.",
+            "pass_condition": "A task cancelled during a gated save remains incomplete and undismissed after the repository returns success; regression passes.",
+            "status": "Done",
+            "verification": "Reviewer-authored exact-source harness passed on 53f35a8d53b56db8a9df350878f795fa86c863d3; supplied portable suite also verifies applicable restored failure/success/denial tests."
+          },
+          {
+            "id": "B4",
+            "source": "Validation gap",
+            "required_outcome": "Successful relevant exact-target app build and hosted tests.",
+            "pass_condition": "Developer or CI supplies successful FixtureApp Debug build-for-testing then test-without-building on an installed iPhone simulator, recording the reviewed repaired head SHA (or proven current merge result), Xcode/OS/destination, underlying exits, and relevant tests.",
+            "status": "Done",
+            "remaining": "Host sandbox prevented a successful app build and simulator access; no source change is requested for this evidence item.",
+            "verification": "Supplied exact-head FixtureApp Debug build-for-testing and test-without-building both exit 0; app-hosted 3-test suite passed, hashes/provenance verified."
+          }
+        ],
+        "E": [],
+        "review_words": 671,
+        "fresh_context": false,
+        "model_id": "gpt-6-sol",
+        "tokens": null,
+        "review_sha256": "4c45a45f32f2b0297b8abdcdc301a0031cc26f4e8d6133b90ae97ea541edd260",
+        "frozen_record_sha256": "01d62006eed511ad51e41ed5826372e9f94959bed1c4476033e6b925adfb5d98",
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-3"
+        },
+        "token_usage_scope": "Per-stage usage unavailable; all stages share the whole-session total in reviewer-3"
+      }
+    ],
+    "scores": [
+      3,
+      4,
+      5
+    ],
+    "stable_ids": [
+      "B1",
+      "B2",
+      "B3",
+      "B4"
+    ],
+    "A4": "Not needed or executed: prior exact-source cancellation evidence plus A3 app baseline completed applicable 5.0 gates; no artificial E requirement.",
+    "limits": "Deliberately same reviewer context, actual model/app outcomes; not fresh per-state discovery or physical permission/UI delivery proof."
+  },
+  "independent_xcode_configuration": {
+    "outcomes": [
+      {
+        "input": "X1",
+        "variant": "defect",
+        "base": "16730d3c4c6938c71c5ab8ed7ec61530c13872c5",
+        "head": "cdadcf252b0f1e0b3e8e552a9d9460340d0d0542",
+        "score": 3.0,
+        "decision": "REQUEST_CHANGES",
+        "findings": [
+          {
+            "id": "B1",
+            "severity": "P1",
+            "title": "Keep the deployment target at iOS 17",
+            "path": "Config/App.xcconfig",
+            "start_line": 2,
+            "end_line": 2,
+            "side": "RIGHT",
+            "trigger": "Both app configurations now inherit IPHONEOS_DEPLOYMENT_TARGET = 18.0 from the target xcconfig.",
+            "consequence": "The release excludes installation and update on explicitly supported iOS 17.",
+            "authority": "PRODUCT.md at exact head; base configuration; supplied build log target triples.",
+            "repair": "Restore IPHONEOS_DEPLOYMENT_TARGET = 17.0.",
+            "pass_condition": "App and hosted-test Debug/Release resolve iOS 17.0; focused support-contract check and relevant build/tests on repaired exact head.",
+            "status": "Open"
+          },
+          {
+            "id": "B2",
+            "severity": "P2",
+            "title": "Keep iPad in the supported device family",
+            "path": "Config/App.xcconfig",
+            "start_line": 3,
+            "end_line": 3,
+            "side": "RIGHT",
+            "trigger": "Both app configurations inherit TARGETED_DEVICE_FAMILY = 1 from the target xcconfig.",
+            "consequence": "Native iPad targeting is removed from the previously universal release.",
+            "authority": "PRODUCT.md at exact head and complete target/project configuration chain.",
+            "repair": "Restore TARGETED_DEVICE_FAMILY = 1,2.",
+            "pass_condition": "App and hosted-test Debug/Release resolve device families 1,2; focused support-contract check.",
+            "status": "Open"
+          }
+        ],
+        "fresh_context_per_case": true,
+        "runtime_sha256": "8650c95e2824407b5efca8d9e79b81504ae262176643d854126d34af697ba10d",
+        "model_id": "gpt-6-sol",
+        "tokens": 570353,
+        "hidden_effective_settings_contract_satisfied": false,
+        "review_sha256": "5888e7937d983556620bf7b04ef7c0cdb727f205f7d822e621e91c461d1f4e11",
+        "frozen_record_sha256": "1618049c8206a8e89b430bc2e259ceb1c0eab58be19b0f97c58bd67422413e39",
+        "review_words": 639,
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-8"
+        },
+        "token_usage_scope": "Client-reported whole reviewer session, not isolated task/billing cost; see reviewer-8"
+      },
+      {
+        "input": "X2",
+        "variant": "clean",
+        "base": "16730d3c4c6938c71c5ab8ed7ec61530c13872c5",
+        "head": "70c60bf32771f5dc936f73706d4ad5a1a572a72c",
+        "score": 5,
+        "decision": "APPROVE",
+        "findings": [],
+        "fresh_context_per_case": true,
+        "runtime_sha256": "8650c95e2824407b5efca8d9e79b81504ae262176643d854126d34af697ba10d",
+        "model_id": "gpt-6-sol",
+        "tokens": 916905,
+        "hidden_effective_settings_contract_satisfied": true,
+        "review_sha256": "b97c600ed41e5e5bf8487cef550df724596653bb8367ff2a58ee1f887cf51468",
+        "frozen_record_sha256": "c7ec2832610cdbeafc42933706bbcc85b88c648af65ff9c424b1e7b2e40eda84",
+        "review_words": 492,
+        "model_settings": {
+          "reasoning_effort": "ultra"
+        },
+        "metadata_provenance": {
+          "kind": "post-hoc recovery, not original freeze metadata",
+          "record": "provenance-recovery.json#reviewer-9"
+        },
+        "token_usage_scope": "Client-reported whole reviewer session, not isolated task/billing cost; see reviewer-9"
+      }
+    ],
+    "limits": "Two small controlled app-configuration snapshots. Static support-contract discovery is distinct from execution on older iOS/iPad."
+  },
+  "author_checks": {
+    "visible_suites_passed": 10,
+    "hidden_pairs_checked": 4,
+    "limits": "Author knows seeds. Current iPhone simulator/settings checks do not prove execution on old iOS, iPad, physical device, background delivery, pairing, or Keychain lock behavior."
+  },
+  "not_established": [
+    "Production PR recall or false-positive rate",
+    "Cross-model Claude/Fable/Opus comparison",
+    "Measured model token/latency improvement",
+    "Representative historical PR corpus",
+    "Physical-device reliability",
+    "Every generated C/D scenario as an agent outcome"
+  ],
+  "publication_note": "Derived summary omits private host paths and logs. Earlier measurements were not rerun for 1.0.1."
+}
