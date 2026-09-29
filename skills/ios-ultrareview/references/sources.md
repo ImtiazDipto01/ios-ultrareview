@@ -31,11 +31,6 @@ GitHub submission policy, and convergence-focused re-review protocol.
   by Thomas Ricouard — intent-first review swarms, deduplication, evidence discipline, SwiftUI
   ownership/composition, and performance investigation. [MIT
   license](https://github.com/Dimillian/Skills/blob/05ba982bfeb0d77d3c97d4542b0ee15034d05f84/LICENSE).
-- [sanyuan0704/sanyuan-skills code-review-expert at
-  `08b6572`](https://github.com/sanyuan0704/sanyuan-skills/blob/08b6572ef108f22d4e8a3ecf9182a4bbef097744/skills/code-review-expert/SKILL.md)
-  — impact-radius review, risk scanning, actionable inline feedback, and honest reporting of
-  validation gaps. [MIT
-  license](https://github.com/sanyuan0704/sanyuan-skills/blob/08b6572ef108f22d4e8a3ecf9182a4bbef097744/LICENSE).
 
 ## Primary platform and review guidance
 
